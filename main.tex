@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{./lostdog}
+\usepackage{background}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+% YOUR FRIEND INFO CHANGE IT ONLY HERE=================================
+\newcommand{\lostPet}[1]{
+  \centering{ \fontsize{80}{70}\selectfont{ \textbf{LOST \uppercase{#1}}}}\\
+}
+\newcommand{\mylostpet}{
+  \lostPet{dog} %<{"type": "text", "description": "Type of pet"}>
+}
+\newcommand{\reward}[1]{
+  \centering{\fontsize{40}{60}\selectfont{ \textbf{REWARD: \uppercase{#1}}}}
+}
+\newcommand{\myreward}{
+  \reward{50 dollars} %<{"type": "text", "description": "Reward (optional)", "deleteOnEmpty": "true"}>
+}
+\newcommand{\pupsName}
+  {Daisy} %<{"type": "text", "description": "Pet's name"}>
+\newcommand{\pupsBreed}
+  {Dalmatian} %<{"type": "text", "description": "Breed"}>
+\newcommand{\marksInfo}
+  {Heart shaped spot on her tail, one eye black spot, one eye white. Answers to her name. She needs medicine right away, family misses her.} %<{"type": "textblock", "description": "Identifying information"}>
+\newcommand{\lastSeen}
+{Corner of Fifth st and Elm, Our City, State - Jan 12th 8:00 a.m.} %<{"type": "text", "description": "Last seen"}>
+\newcommand{\contactPhone}
+{(821) 555-1212} %<{"type": "phonenumber", "description": "Contact phone number"}>
+\newcommand{\contactEmail}
+{DaisysFamily@gmail.com} %<{"type": "email", "description": "Contact e-mail address"}>
+
+ 
+%======================================================
+
+\backgroundsetup{ % setting the image of your pupper as a background, the bigger the better people can see how they look like
+  scale=1,
+  angle=0,
+  opacity=1,  %% adjust
+  contents={
+    \includegraphics[width=\paperwidth,height=\paperheight]
+    {dog} %<{"type": "crop", "description": "Picture of your pet", "aspect": 0.77273}>
+  }
+}
+
+\begin{document}
+\begin{mybox}[]
+  \mylostpet
+  \myreward
+\end{mybox}
+\begin{tikzpicture}[remember picture, overlay]
+  \node [anchor=south, shift={(0.5\paperwidth, -0.15cm)}]  at (current page.south west) {%
+    \begin{mybox}[]
+      \centering{ \fontsize{40}{20}\selectfont{ \textbf{``\pupsName" the \pupsBreed}}\\
+
+        \centering{ \fontsize{22}{5}\selectfont{\textbf{\marksInfo \\ Last seen: \lastSeen}}}
+
+        \fontsize{40}{50}\selectfont{ \textbf{Contact: \contactPhone}}\\
+
+        \fontsize{40}{70}\selectfont{ \textbf{Email: \contactEmail}}}
+    \end{mybox}
+  };
+\end{tikzpicture}
+
+\end{document}

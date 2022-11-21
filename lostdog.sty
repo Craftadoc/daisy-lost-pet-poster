@@ -1,0 +1,24 @@
+\ProvidesPackage{lostdog}
+\usepackage{geometry}
+\geometry{letterpaper, margin=0pt}
+\usepackage{anyfontsize}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[many]{tcolorbox}
+\usepackage[absolute]{textpos}
+\newtcolorbox{mybox}[1][]{
+	width=\textwidth,
+	arc=0mm,
+	%    auto outer arc,
+	boxsep=0cm,
+	toprule=0pt,
+	leftrule=0pt,
+	bottomrule=0pt,
+	rightrule=0pt,
+	colframe=white,
+	fontupper=\raggedleft\fontsize{22pt}{22pt}\itshape,
+	breakable,
+	nobeforeafter,
+	enhanced jigsaw,
+	opacityframe=0.7,
+	opacityback=0.7
+}
