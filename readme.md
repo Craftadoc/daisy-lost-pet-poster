@@ -1,6 +1,6 @@
 # Lost Pet Poster Template
 
-A [Craftadoc](https://craftadoc.com) template.
+A [Craftadoc](https://craftadoc.com) template. (Using LaTeX.)
 
 A quick way to get a a poster (letterpaper size by default) with a picture (as background) of your lost pet.
 
