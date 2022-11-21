@@ -28,7 +28,7 @@ https://www.overleaf.com/latex/examples/lost-dog-poster/dsmznrwxcyjv
 ### Changes:
 * Slightly changed layout so that bottom box will always touch the bottom, no matter the content.
 * Added Craftadoc input markers.
-* Small commmand changes.
+* Small command changes.
 
 ### License
 [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
