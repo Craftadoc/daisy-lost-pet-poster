@@ -8,26 +8,26 @@
   \centering{ \fontsize{80}{70}\selectfont{ \textbf{LOST \uppercase{#1}}}}\\
 }
 \newcommand{\mylostpet}{
-  \lostPet{dog} %<{"type": "text", "description": "Type of pet"}>
+  \lostPet{dog} %<{"type": "text", "description": "Type of pet", inputValue: "dog"}>
 }
 \newcommand{\reward}[1]{
   \centering{\fontsize{40}{60}\selectfont{ \textbf{REWARD: \uppercase{#1}}}}
 }
 \newcommand{\myreward}{
-  \reward{50 dollars} %<{"type": "text", "description": "Reward (optional)", "deleteOnEmpty": "true"}>
+  \reward{\$50} %<{"type": "text", "description": "Reward (optional)", "deleteOnEmpty": "true", inputValue: "$50"}>
 }
 \newcommand{\pupsName}
-  {Daisy} %<{"type": "text", "description": "Pet's name"}>
+  {Daisy} %<{"type": "text", "description": "Pet's name", inputValue: "Daisy"}>
 \newcommand{\pupsBreed}
-  {Dalmatian} %<{"type": "text", "description": "Breed"}>
+  {Dalmatian} %<{"type": "text", "description": "Breed", inputValue: "Dalmatian"}>
 \newcommand{\marksInfo}
-  {Heart shaped spot on her tail, one eye black spot, one eye white. Answers to her name. She needs medicine right away, family misses her.} %<{type: "textblock", description: "Identifying information", injectBrackets: true}>
+  {Heart shaped spot on her tail, one eye black spot, one eye white. Answers to her name. She needs medicine right away, family misses her.} %<{type: "textblock", description: "Identifying information", injectBrackets: true, inputValue: "Heart shaped spot on her tail, one eye black spot, one eye white. Answers to her name. She needs medicine right away, family misses her."}>
 \newcommand{\lastSeen}
-{Corner of Fifth st and Elm, Our City, State - Jan 12th 8:00 a.m.} %<{"type": "text", "description": "Last seen"}>
+{Corner of Fifth st and Elm, Our City, State - Jan 12th 8:00 a.m.} %<{"type": "text", "description": "Last seen", inputValue: "Corner of Fifth st and Elm, Our City, State - Jan 12th 8:00 a.m."}>
 \newcommand{\contactPhone}
-{(821) 555-1212} %<{"type": "phonenumber", "description": "Contact phone number"}>
+{(821) 555-1212} %<{"type": "phonenumber", "description": "Contact phone number", inputValue: "(821) 555-1212"}>
 \newcommand{\contactEmail}
-{DaisysFamily@gmail.com} %<{"type": "email", "description": "Contact e-mail address"}>
+{DaisysFamily@gmail.com} %<{"type": "email", "description": "Contact e-mail address", inputValue: "DaisysFamily@gmail.com"}>
 
  
 %======================================================
@@ -38,7 +38,7 @@
   opacity=1,  %% adjust
   contents={
     \includegraphics[width=\paperwidth,height=\paperheight]
-    {dog} %<{"type": "crop", "description": "Picture of your pet", "aspect": 0.77273}>
+    {dog} %<{"type": "crop", "description": "Picture of your pet", "aspect": 0.77273, inputValue: "dog"}>
   }
 }
 
